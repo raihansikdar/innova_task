@@ -16,16 +16,17 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
   int _selectedScreenIndex = 2;
 
   final List<Widget> _screen =  [
-    MainScreen(),
-    MainScreen(),
-    MainScreen(),
-    MainScreen(),
-    MainScreen(),
-   // HomePage(),
-   // HomePage(),
-   // HomePage(),
-   // HomePage(),
-   // HomePage(),
+    // MainScreen(),
+    // MainScreen(),
+    // MainScreen(),
+    // MainScreen(),
+    // MainScreen(),
+
+   HomePage(),
+   HomePage(),
+   HomePage(),
+   HomePage(),
+   HomePage(),
   ];
   @override
   Widget build(BuildContext context) {

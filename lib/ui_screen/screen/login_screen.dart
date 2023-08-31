@@ -66,11 +66,6 @@ class _LoginScreenState extends State<LoginScreen> {
                             _showEmailValidationError = false;
                           });
                         }
-                          //else {
-                        //   setState(() {
-                        //     _showEmailValidationError = false;
-                        //   });
-                        // }
                       },
                       validator: (String? value){
                         if(value == null || value.trim().isEmpty || !emailRegex.hasMatch(value)){

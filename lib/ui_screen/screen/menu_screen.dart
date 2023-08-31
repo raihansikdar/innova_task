@@ -59,10 +59,10 @@ class MenuScreen extends GetView<MyDrawerController> {
                   text: 'Home Page',
                   image: "assets/icons/home.png",
                   onTap: () {
-                    Navigator.pushAndRemoveUntil(
-                        context,
-                        MaterialPageRoute(builder: (context) => HomePage()),
-                            (route) => false);
+                    // Navigator.pushAndRemoveUntil(
+                    //     context,
+                    //     MaterialPageRoute(builder: (context) => HomePage()),
+                    //         (route) => false);
                   },
                 ),
                 DrawerElememt(text: 'My Cart',image: "assets/icons/bag.png", onTap: () {  },),

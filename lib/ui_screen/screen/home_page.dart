@@ -6,27 +6,26 @@ import 'package:innova_task/ui_screen/screen/main_screen.dart';
 import 'package:innova_task/ui_screen/screen/menu_screen.dart';
 
 
+
 class HomePage extends GetView<MyDrawerController> {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<MyDrawerController>(
-      builder: (_) => ZoomDrawer(
-        controller: _.zoomDrawerController,
-        menuScreen: MenuScreen(),
-        mainScreen: MainScreen(),
-        borderRadius: 24.0,
-        showShadow: false,
-        angle: -12.0,
-        drawerShadowsBackgroundColor: Colors.blue,
-        slideWidth: MediaQuery.of(context).size.width * 0.65,
-
-      )
+      builder: (_) => Container(
+        color: Colors.black, // Set the background color here
+        child: ZoomDrawer(
+          controller: _.zoomDrawerController,
+          menuScreen: const MenuScreen(),
+          mainScreen: MainScreen(),
+          borderRadius: 24.0,
+          showShadow: false,
+          angle: -12.0,
+          slideWidth: MediaQuery.of(context).size.width * 0.65,
+        ),
+      ),
     );
   }
 }
-
-
-
 
 
 
