@@ -4,8 +4,9 @@ import 'package:innova_task/ui_screen/widgets/custom_circle_container.dart';
 import 'package:innova_task/ui_screen/widgets/details_page_banner.dart';
 
 class DetailsScreen extends StatefulWidget {
-  const DetailsScreen({Key? key}) : super(key: key);
-
+  const DetailsScreen({Key? key, required this.tagId, required this.image}) : super(key: key);
+  final String tagId;
+  final String image;
   @override
   State<DetailsScreen> createState() => _DetailsScreenState();
 }
@@ -30,7 +31,10 @@ class _DetailsScreenState extends State<DetailsScreen> {
               padding: EdgeInsets.only(top: 8.0, left: 16.0, right: 16.0),
               child: DetailsPageBanner(),
             ),
-            Image.asset("assets/images/details_image.png"),
+            //Image.asset("assets/images/details_image.png"),
+            Hero(
+                tag: widget.tagId,
+                child: Image.asset(widget.image,height: 200,width: 150)),
             SizedBox(
               height: 416,
               width: double.infinity,
@@ -116,7 +120,9 @@ class _DetailsScreenState extends State<DetailsScreen> {
                               ),
                             ),
                           ),
-                          const SizedBox(width: 16.0,),
+                          const SizedBox(
+                            width: 16.0,
+                          ),
                           Container(
                             height: 70,
                             width: 70,
@@ -132,7 +138,9 @@ class _DetailsScreenState extends State<DetailsScreen> {
                               ),
                             ),
                           ),
-                          const SizedBox(width: 16.0,),
+                          const SizedBox(
+                            width: 16.0,
+                          ),
                           Container(
                             height: 70,
                             width: 70,
@@ -150,7 +158,6 @@ class _DetailsScreenState extends State<DetailsScreen> {
                           ),
                         ],
                       ),
-
                       const SizedBox(
                         height: 16.0,
                       ),

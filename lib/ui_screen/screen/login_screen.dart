@@ -108,8 +108,8 @@ class _LoginScreenState extends State<LoginScreen> {
                      ElevatedButton(
                          onPressed:   _showEmailValidationError ? null : (){
                            if(_formKey.currentState!.validate()){
-                           Get.offAll(()=>const BottomNavScreen(),transition: Transition.rightToLeft);
-                           };
+                           Get.offAll(()=>const BottomNavScreen());
+                           }
                          },
                          child: const Text(
                            "Login",

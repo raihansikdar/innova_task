@@ -5,8 +5,13 @@ import 'package:innova_task/ui_screen/utils/style.dart';
 
 class PopularShoesCard extends StatelessWidget {
   const PopularShoesCard({
-    super.key, required this.image,required this.title, required this.name, required this.price, required this.onTap,
-
+    super.key,
+    required this.image,
+    required this.title,
+    required this.name,
+    required this.price,
+    required this.onTap, 
+    required this.tagId,
   });
 
   final String image;
@@ -14,25 +19,30 @@ class PopularShoesCard extends StatelessWidget {
   final String name;
   final String price;
   final VoidCallback onTap;
+  final String tagId;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
-        Get.to(()=>DetailsScreen(),transition : Transition.rightToLeft);
+      onTap: () {
+        Get.to(() =>  DetailsScreen(tagId: tagId,image: image,), transition: Transition.rightToLeft,duration:const Duration(milliseconds: 600));
       },
       child: Card(
         elevation: 0,
-        shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(16.0)
-        ),
+        shape:
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(16.0)),
         child: Stack(
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 8.0,horizontal: 16.0),
+              padding:
+                  const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Image.asset(image,height: 120,width: 135),
+                  Hero(
+                    tag: tagId,
+                    transitionOnUserGestures: true,
+                    child: Image.asset(image, height: 120, width: 135),
+                  ),
                   Text(
                     title,
                     style: const TextStyle(
@@ -50,7 +60,6 @@ class PopularShoesCard extends StatelessWidget {
                         fontSize: textFontSize,
                         fontWeight: mediumFontWeight,
                         color: kTextColor,
-
                       ),
                     ),
                   ),
@@ -60,7 +69,6 @@ class PopularShoesCard extends StatelessWidget {
                       fontSize: textFontSize,
                       fontWeight: regularFontWeight,
                       color: kTextColor,
-
                     ),
                   )
                 ],

@@ -22,11 +22,11 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
     // MainScreen(),
     // MainScreen(),
 
-   HomePage(),
-   HomePage(),
-   HomePage(),
-   HomePage(),
-   HomePage(),
+   const HomePage(),
+   const HomePage(),
+   const HomePage(),
+   const HomePage(),
+   const HomePage(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -34,9 +34,8 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
       body: _screen[_selectedScreenIndex],
       bottomNavigationBar: CurvedNavigationBar(
         key: _bottomNavigationKey,
-        height: 65,
+        height: 60,
         index: _selectedScreenIndex,
-
         backgroundColor: Colors.transparent,
         onTap: (index) {
           _selectedScreenIndex =index;

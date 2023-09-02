@@ -3,8 +3,8 @@ import 'package:innova_task/ui_screen/controller/drawer_controller.dart';
 import 'package:innova_task/ui_screen/utils/style.dart';
 import 'package:innova_task/ui_screen/widgets/custom_circle_container.dart';
 
-class HomePageBanner extends StatelessWidget {
-  const HomePageBanner({
+class MainScreenBanner extends StatelessWidget {
+  const MainScreenBanner({
     super.key,
     required this.controller,
   });
@@ -22,34 +22,40 @@ class HomePageBanner extends StatelessWidget {
           borderRadius: 25,
           color: kWhiteColor,
           onTap: () {
-
+            controller.toggleDrawer();
           },
-          child: GestureDetector(
-              onTap:  controller.toggleDrawer,
-              child: const Icon(Icons.dataset_outlined)),
+          child: const Icon(Icons.dataset_outlined),
         ),
         const Column(
           children: [
-            Text("Store location",
+            Text(
+              "Store location",
               style: TextStyle(
                 fontSize: textSmallFontSize,
                 fontWeight: mediumFontWeight,
                 color: locationColor,
               ),
             ),
-           Row(
-             children: [
-               Icon(Icons.location_on,size: 16,color: kRedColor,),
-               SizedBox(width: 4.0,),
-               Text("Mondolibug, Sylhet",
-                 style: TextStyle(
-                   fontSize: textSmallFontSize,
-                   fontWeight: mediumFontWeight,
-                   color: kTextColor,
-                 ),
-               ),
-             ],
-           )
+            Row(
+              children: [
+                Icon(
+                  Icons.location_on,
+                  size: 16,
+                  color: kRedColor,
+                ),
+                SizedBox(
+                  width: 4.0,
+                ),
+                Text(
+                  "Mondolibug, Sylhet",
+                  style: TextStyle(
+                    fontSize: textSmallFontSize,
+                    fontWeight: mediumFontWeight,
+                    color: kTextColor,
+                  ),
+                ),
+              ],
+            )
           ],
         ),
         CustomCircleContainer(
@@ -57,27 +63,27 @@ class HomePageBanner extends StatelessWidget {
           width: 50,
           borderRadius: 25,
           color: kWhiteColor,
-          onTap: () {  },
+          onTap: () {},
           child: Stack(
             children: [
               Positioned(
-                  right: 5,
-                  top: 5,
-                  child: Container(
-                    width: 10.0,
-                    height: 10.0,
-                    decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: kRedColor,
-                    ),
+                right: 5,
+                top: 5,
+                child: Container(
+                  width: 10.0,
+                  height: 10.0,
+                  decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: kRedColor,
                   ),
+                ),
               ),
               Center(
                   child: Image.asset(
-                    "assets/icons/bag.png",
-                    height: 25,
-                    width: 25,
-                  )),
+                "assets/icons/bag.png",
+                height: 25,
+                width: 25,
+              )),
             ],
           ),
         ),

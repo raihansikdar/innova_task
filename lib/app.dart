@@ -39,7 +39,7 @@ class InnovaTask extends StatelessWidget {
         )
 
       ),
-      home: SplashScreen(),
+      home:  const SplashScreen(),
     );
   }
 }
