@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:innova_task/ui_screen/screen/home_page.dart';
 import 'package:innova_task/ui_screen/screen/bottom_nav_screen.dart';
 import 'package:innova_task/ui_screen/utils/style.dart';
 
 
 class LoginScreen extends StatefulWidget {
-   LoginScreen({Key? key}) : super(key: key);
+   const LoginScreen({Key? key}) : super(key: key);
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();

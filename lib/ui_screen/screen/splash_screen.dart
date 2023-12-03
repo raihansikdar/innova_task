@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:innova_task/ui_screen/screen/home_page.dart';
-import 'package:innova_task/ui_screen/screen/bottom_nav_screen.dart';
 import 'package:innova_task/ui_screen/screen/login_screen.dart';
-import 'package:innova_task/ui_screen/screen/main_screen.dart';
+
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
